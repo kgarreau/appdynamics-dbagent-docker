@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  docker-db-agent:
+    build: .
+    container_name: docker-db-agent
+    image: appdynamics/docker-db-agent
+    environment:
+      - APPD_HOST=
+      - APPD_PORT=443
+      - APPD_ACCOUNT_NAME=
+      - APPD_ACCESS_KEY=
+      - APPD_SSL_ENABLED=true
+      - APPD_DBAGENT_NAME=docker-dbagent
+    volumes:
+      - /:/hostroot:ro
+      - /var/run/docker.sock:/var/run/docker.sock

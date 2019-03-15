@@ -1,0 +1,13 @@
+#!bin/bash
+
+# This is a sample environment file for 
+
+DB_PROPERTIES="-Dappdynamics.controller.hostName=${APPD_HOST}"
+DB_PROPERTIES+=" -Dappdynamics.controller.port=${APPD_PORT}"
+DB_PROPERTIES+=" -Dappdynamics.agent.accountName=${APPD_ACCOUNT_NAME%%_*}" 
+DB_PROPERTIES+=" -Dappdynamics.agent.accountAccessKey=${APPD_ACCESS_KEY}" 
+DB_PROPERTIES+=" -Dappdynamics.controller.ssl.enabled=${APPD_SSL_ENABLED}"
+DB_PROPERTIES+=" -Ddbagent.name=${APPD_DBAGENT_NAME}"
+
+#java -XX:+HeapDumpOnOutOfMemoryError -XX:OnOutOfMemoryError=“kill -9 %p” -jar ${DB_AGENT_HOME}/db-agent.jar ${DB_PROPERTIES}
+java ${DB_PROPERTIES} -jar ${DB_AGENT_HOME}/db-agent.jar
