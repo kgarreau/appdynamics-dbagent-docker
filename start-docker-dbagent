@@ -1,6 +1,8 @@
 #!bin/bash
 
-# This is a sample environment file for 
+# This is a sample environment file for the AppDynamics Database Visibility Agent
+# If more properties are needed, add to the DB_PROPERTIES env as necessary, see the
+# AppDynamics documentation portal for more details.
 
 DB_PROPERTIES="-Dappdynamics.controller.hostName=${APPD_HOST}"
 DB_PROPERTIES+=" -Dappdynamics.controller.port=${APPD_PORT}"
