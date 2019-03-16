@@ -1,4 +1,4 @@
-# Sample Dockerfile for the AppDynamics Standalone Machine Agent
+# Sample Dockerfile for the AppDynamics Database Visibility Agent
 # This is provided for illustration purposes only, for full details 
 # please consult the product documentation: https://docs.appdynamics.com/
 
